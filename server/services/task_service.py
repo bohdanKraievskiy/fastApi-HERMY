@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from ..models.task import Task, UserTaskCompletion
+from ..models.user import Task, UserTaskCompletion
 
 def get_all_tasks(db: Session):
     return db.query(Task).all()

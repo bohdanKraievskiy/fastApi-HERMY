@@ -16,7 +16,6 @@ Base = declarative_base()
 
 async def init_db():
     async with engine.begin() as conn:
-        # Створюємо всі таблиці
         await conn.run_sync(Base.metadata.create_all)
 
 
